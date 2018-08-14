@@ -97,15 +97,15 @@ export default class Provider {
   }
 
   getBlock (height) {
-    return this.getFromNode({ key: 'explorer', url: `/block`, params: { height } })
+    return this.getFromNode({ key: 'explorer', url: `/blocks/${height}` })
   }
 
   async getBlockHeaderProof (height) {
-    return this.getFromNode({ key: 'anchoring', url: `/block_header_proof`, params: { height } })
+    return this.getFromNode({ key: 'anchoring', url: `/block_header_proof/${height}` })
   }
 
   getTx (hash) {
-    return this.getFromNode({ key: 'explorer', url: `/transactions`, params: { hash } })
+    return this.getFromNode({ key: 'explorer', url: `/transactions/${hash}` })
   }
 
   checkBlocksChain (blocks, nextCheck) {

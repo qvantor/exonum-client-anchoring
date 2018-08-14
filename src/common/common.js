@@ -19,6 +19,7 @@ export const byteArrayToInt = byteArray => {
 
 const Block = newType({
   fields: [
+    { name: 'schema_version', type: Uint16 },
     { name: 'proposer_id', type: Uint16 },
     { name: 'height', type: Uint64 },
     { name: 'tx_count', type: Uint32 },
